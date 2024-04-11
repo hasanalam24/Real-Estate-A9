@@ -1,0 +1,172 @@
+[
+    {
+        "id": 1,
+        "a_relevent_image": "image_url_1",
+        "estate_title": "Title 1",
+        "segment_name": "Segment 1",
+        "description": "Description 1",
+        "price": 100000,
+        "status": "sale",
+        "area": 1200,
+        "location": "Location 1",
+        "facilities": [
+            "living room",
+            "swimming pool",
+            "kitchen"
+        ],
+        "discount": 5000
+    },
+    {
+        "id": 2,
+        "a_relevent_image": "image_url_2",
+        "estate_title": "Title 2",
+        "segment_name": "Segment 2",
+        "description": "Description 2",
+        "price": 150000,
+        "status": "rent",
+        "area": 1500,
+        "location": "Location 2",
+        "facilities": [
+            "gym",
+            "parking",
+            "balcony"
+        ],
+        "discount": 7000
+    },
+    {
+        "id": 3,
+        "a_relevent_image": "image_url_3",
+        "estate_title": "Title 3",
+        "segment_name": "Segment 3",
+        "description": "Description 3",
+        "price": 120000,
+        "status": "sale",
+        "area": 1000,
+        "location": "Location 3",
+        "facilities": [
+            "garden",
+            "security",
+            "garage"
+        ],
+        "discount": 4000
+    },
+    {
+        "id": 4,
+        "a_relevent_image": "image_url_4",
+        "estate_title": "Title 4",
+        "segment_name": "Segment 4",
+        "description": "Description 4",
+        "price": 80000,
+        "status": "rent",
+        "area": 900,
+        "location": "Location 4",
+        "facilities": [
+            "playground",
+            "maid's room",
+            "internet"
+        ],
+        "discount": 3000
+    },
+    {
+        "id": 5,
+        "a_relevent_image": "image_url_5",
+        "estate_title": "Title 5",
+        "segment_name": "Segment 5",
+        "description": "Description 5",
+        "price": 200000,
+        "status": "sale",
+        "area": 1800,
+        "location": "Location 5",
+        "facilities": [
+            "tennis court",
+            "BBQ area",
+            "fireplace"
+        ],
+        "discount": 10000
+    },
+    {
+        "id": 6,
+        "a_relevent_image": "image_url_6",
+        "estate_title": "Title 6",
+        "segment_name": "Segment 6",
+        "description": "Description 6",
+        "price": 180000,
+        "status": "rent",
+        "area": 1600,
+        "location": "Location 6",
+        "facilities": [
+            "cinema room",
+            "sauna",
+            "central heating"
+        ],
+        "discount": 8000
+    },
+    {
+        "id": 7,
+        "a_relevent_image": "image_url_7",
+        "estate_title": "Title 7",
+        "segment_name": "Segment 7",
+        "description": "Description 7",
+        "price": 90000,
+        "status": "sale",
+        "area": 1100,
+        "location": "Location 7",
+        "facilities": [
+            "study room",
+            "rooftop terrace",
+            "jacuzzi"
+        ],
+        "discount": 4500
+    },
+    {
+        "id": 8,
+        "a_relevent_image": "image_url_8",
+        "estate_title": "Title 8",
+        "segment_name": "Segment 8",
+        "description": "Description 8",
+        "price": 130000,
+        "status": "rent",
+        "area": 1300,
+        "location": "Location 8",
+        "facilities": [
+            "bicycle storage",
+            "laundry room",
+            "pet-friendly"
+        ],
+        "discount": 6000
+    },
+    {
+        "id": 9,
+        "a_relevent_image": "image_url_9",
+        "estate_title": "Title 9",
+        "segment_name": "Segment 9",
+        "description": "Description 9",
+        "price": 110000,
+        "status": "sale",
+        "area": 1400,
+        "location": "Location 9",
+        "facilities": [
+            "game room",
+            "green space",
+            "guest suite"
+        ],
+        "discount": 5500
+    },
+    {
+        "id": 10,
+        "a_relevent_image": "image_url_10",
+        "estate_title": "Title 10",
+        "segment_name": "Segment 10",
+        "description": "Description 10",
+        "price": 140000,
+        "status": "rent",
+        "area": 1700,
+        "location": "Location 10",
+        "facilities": [
+            "yoga studio",
+            "security system",
+            "library"
+        ],
+        "discount": 7500
+    }
+]
