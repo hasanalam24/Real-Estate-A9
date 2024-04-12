@@ -1,12 +1,15 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 
 const Login = () => {
 
     const { signInUser, googleLogin, githubLogin } = useContext(AuthContext)
+    const navigate = useNavigate()
+    const location = useLocation()
+
 
     const {
         register,
@@ -26,7 +29,18 @@ const Login = () => {
             })
     }
 
+    const handleLogin = allProvider => {
+        allProvider()
+            .then(result => {
+                if (result.user) {
+                    navigate(location?.state)
+                }
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
 
+    }
 
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -66,10 +80,10 @@ const Login = () => {
                     </div>
                     <div className="flex justify-between items-center">
                         <div>
-                            <button onClick={() => googleLogin()} className="btn btn-primary">Google</button>
+                            <button onClick={() => handleLogin(googleLogin)} className="btn btn-primary">Google</button>
                         </div>
                         <div>
-                            <button onClick={() => githubLogin()} className="btn btn-primary">Github</button>
+                            <button onClick={() => handleLogin(githubLogin)} className="btn btn-primary">Github</button>
                         </div>
                     </div>
                 </div>
