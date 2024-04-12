@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "images": "single-house.jpg",
+        "images": "/single-house.jpg",
         "estate_title": "Single-Family Homes",
         "segment_name": "Segment 1",
         "description": "Single-family homes, designed for one family, provide privacy, space, and customization. They're ideal for those valuing independence and stability, offering a range of options from modest to luxurious dwellings",
@@ -18,7 +18,7 @@
     },
     {
         "id": 2,
-        "images": "Townhouse.jpg",
+        "images": "/Townhouse.jpg",
         "estate_title": "Townhouses",
         "segment_name": "Segment 2",
         "description": "Townhouses are residential properties typically arranged in rows, sharing walls with neighboring units. They offer a blend of space and convenience, often featuring multiple floors with shared walls, providing a sense of community while maintaining some privacy. Townhouses are popular for their efficient use of space and amenities like shared green areas or recreational facilities, appealing to individuals or families seeking a balance between privacy and community living",
@@ -35,7 +35,7 @@
     },
     {
         "id": 3,
-        "images": "apartment.jpg",
+        "images": "/apartment.jpg",
         "estate_title": "Apartments",
         "segment_name": "Segment 3",
         "description": "Apartments are multi-unit residential buildings where individual units are leased to tenants. They offer convenience, often including amenities like fitness centers or pools. Ideal for individuals or small families seeking low-maintenance living in urban or suburban settings, apartments provide varying floor plans and lease options, making them versatile for diverse lifestyles",
@@ -52,7 +52,7 @@
     },
     {
         "id": 4,
-        "images": "student-house.jpg",
+        "images": "/student-house.jpg",
         "estate_title": "Student Housing",
         "segment_name": "Segment 4",
         "description": "Student houses are shared accommodations where students live together, typically near college or university campuses. They offer affordability and a sense of community, with students sharing common areas like kitchens and living rooms. Student houses provide a social atmosphere conducive to collaboration and friendship, making them popular among students seeking a supportive environment for their academic pursuits",
@@ -69,7 +69,7 @@
     },
     {
         "id": 5,
-        "images": "living-room.jpg",
+        "images": "/living-room.jpg",
         "estate_title": "Senior Living Communities",
         "segment_name": "Segment 5",
         "description": "Senior living rooms are designed with comfort and accessibility in mind for older adults. They prioritize safety features like handrails and non-slip flooring, along with spacious layouts to accommodate mobility aids. These rooms often feature natural lighting, ergonomic furniture, and easy-to-reach amenities, promoting independence and well-being. Additionally, they may incorporate technology for convenience, such as remote-controlled lighting or temperature settings. Overall, senior living rooms aim to create a peaceful and supportive environment where seniors can age gracefully and maintain their quality of life.",
@@ -86,7 +86,7 @@
     },
     {
         "id": 6,
-        "images": "vacation.jpg",
+        "images": "/vacation.jpg",
         "estate_title": "Vacation Rentals",
         "segment_name": "Segment 6",
         "description": "Vacation residences offer temporary accommodation for travelers seeking relaxation or adventure. They come in various forms including beachfront villas, mountain cabins, or urban apartments. These homes are equipped with amenities like kitchens, living areas, and often feature extras such as private pools or scenic views. Designed for short-term stays, they provide a home-away-from-home experience, allowing guests to unwind and explore new destinations. Whether for romantic getaways, family vacations, or solo adventures, vacation residences offer flexibility and comfort for memorable trips.",

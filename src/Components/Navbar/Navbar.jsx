@@ -11,6 +11,9 @@ const Navbar = () => {
                 <NavLink to='/UpdateProfile'>Update Profile</NavLink>
             </li>
             <li>
+                <NavLink to='/register'>Register</NavLink>
+            </li>
+            <li>
                 <NavLink to='/contact'>Contact</NavLink>
             </li>
             <li>
@@ -42,7 +45,11 @@ const Navbar = () => {
 
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end space-x-3">
+                <div className="indicator">
+                    <span className="indicator-item badge badge-secondary"></span>
+                    <div className="grid w-12 h-12 bg-base-300 place-items-center">Pic</div>
+                </div>
                 <Link to='/login' >
                     <button className="btn btn-secondary font-bold">Login</button>
 

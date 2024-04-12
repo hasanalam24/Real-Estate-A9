@@ -7,6 +7,7 @@ import Contact from "../Pages/Contact/Contact";
 import About from "../Pages/About/About";
 
 import Details from "../Components/Details/Details";
+import Register from "../Pages/Register/Register";
 
 
 const router = createBrowserRouter([
@@ -18,12 +19,12 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('data.json')
+                loader: () => fetch('/data.json')
             },
             {
                 path: '/details/:search',
                 element: <Details></Details>,
-                loader: () => fetch('data.json')
+                loader: () => fetch('/data.json')
             },
             {
                 path: '/UpdateProfile',
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login></Login>
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
             },
             {
                 path: '/contact',
