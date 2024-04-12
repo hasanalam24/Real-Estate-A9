@@ -3,7 +3,7 @@
 const UpdateProfile = () => {
     return (
         <div>
-            this is updates profile
+            this is update
         </div>
     );
 };
