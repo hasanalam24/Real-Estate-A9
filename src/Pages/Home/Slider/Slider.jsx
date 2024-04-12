@@ -1,11 +1,23 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import { Navigation } from 'swiper/modules';
+import 'swiper/swiper-bundle.css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+
+import { Navigation, Pagination, A11y } from 'swiper/modules';
 
 const Slider = () => {
     return (
         <div>
-            <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+            <Swiper className="mySwiper" modules={[Navigation, Pagination, A11y]}
+
+                spaceBetween={50}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true }}
+                scrollbar={{ draggable: true }}
+                onSwiper={(swiper) => console.log(swiper)}
+                onSlideChange={() => console.log('slide change')}>
                 <SwiperSlide>
                     <img className='h-[700px] w-full' src="/image- 4.jpg" alt="" />
                 </SwiperSlide>

@@ -1,13 +1,13 @@
 [
     {
         "id": 1,
-        "a_relevent_image": "image_url_1",
-        "estate_title": "Title 1",
+        "images": "single-house.jpg",
+        "estate_title": "Single-Family Homes",
         "segment_name": "Segment 1",
         "description": "Description 1",
         "price": 100000,
         "status": "sale",
-        "area": 1200,
+        "area": "1200 sqf",
         "location": "Location 1",
         "facilities": [
             "living room",
@@ -18,13 +18,13 @@
     },
     {
         "id": 2,
-        "a_relevent_image": "image_url_2",
-        "estate_title": "Title 2",
+        "images": "Townhouse.jpg",
+        "estate_title": "Townhouses",
         "segment_name": "Segment 2",
         "description": "Description 2",
         "price": 150000,
         "status": "rent",
-        "area": 1500,
+        "area": "1500 sqf",
         "location": "Location 2",
         "facilities": [
             "gym",
@@ -35,13 +35,13 @@
     },
     {
         "id": 3,
-        "a_relevent_image": "image_url_3",
-        "estate_title": "Title 3",
+        "images": "apartment.jpg",
+        "estate_title": "Apartments",
         "segment_name": "Segment 3",
         "description": "Description 3",
         "price": 120000,
         "status": "sale",
-        "area": 1000,
+        "area": "1000 sqf",
         "location": "Location 3",
         "facilities": [
             "garden",
@@ -52,13 +52,13 @@
     },
     {
         "id": 4,
-        "a_relevent_image": "image_url_4",
-        "estate_title": "Title 4",
+        "images": "student-house.jpg",
+        "estate_title": "Student Housing",
         "segment_name": "Segment 4",
         "description": "Description 4",
         "price": 80000,
         "status": "rent",
-        "area": 900,
+        "area": "900 sqf",
         "location": "Location 4",
         "facilities": [
             "playground",
@@ -69,13 +69,13 @@
     },
     {
         "id": 5,
-        "a_relevent_image": "image_url_5",
-        "estate_title": "Title 5",
+        "images": "living-room.jpg",
+        "estate_title": "Senior Living Communities",
         "segment_name": "Segment 5",
         "description": "Description 5",
         "price": 200000,
         "status": "sale",
-        "area": 1800,
+        "area": "1800 sqf",
         "location": "Location 5",
         "facilities": [
             "tennis court",
@@ -86,13 +86,13 @@
     },
     {
         "id": 6,
-        "a_relevent_image": "image_url_6",
-        "estate_title": "Title 6",
+        "images": "vacation.jpg",
+        "estate_title": "Vacation Rentals",
         "segment_name": "Segment 6",
         "description": "Description 6",
         "price": 180000,
         "status": "rent",
-        "area": 1600,
+        "area": "1600 sqf",
         "location": "Location 6",
         "facilities": [
             "cinema room",
@@ -103,13 +103,13 @@
     },
     {
         "id": 7,
-        "a_relevent_image": "image_url_7",
+        "images": "image_url_7",
         "estate_title": "Title 7",
         "segment_name": "Segment 7",
         "description": "Description 7",
         "price": 90000,
         "status": "sale",
-        "area": 1100,
+        "area": "1100 sqf",
         "location": "Location 7",
         "facilities": [
             "study room",
@@ -120,13 +120,13 @@
     },
     {
         "id": 8,
-        "a_relevent_image": "image_url_8",
+        "images": "image_url_8",
         "estate_title": "Title 8",
         "segment_name": "Segment 8",
         "description": "Description 8",
         "price": 130000,
         "status": "rent",
-        "area": 1300,
+        "area": "1300 sqf",
         "location": "Location 8",
         "facilities": [
             "bicycle storage",
@@ -137,13 +137,13 @@
     },
     {
         "id": 9,
-        "a_relevent_image": "image_url_9",
+        "images": "image_url_9",
         "estate_title": "Title 9",
         "segment_name": "Segment 9",
         "description": "Description 9",
         "price": 110000,
         "status": "sale",
-        "area": 1400,
+        "area": "1400 sqf",
         "location": "Location 9",
         "facilities": [
             "game room",
@@ -151,22 +151,5 @@
             "guest suite"
         ],
         "discount": 5500
-    },
-    {
-        "id": 10,
-        "a_relevent_image": "image_url_10",
-        "estate_title": "Title 10",
-        "segment_name": "Segment 10",
-        "description": "Description 10",
-        "price": 140000,
-        "status": "rent",
-        "area": 1700,
-        "location": "Location 10",
-        "facilities": [
-            "yoga studio",
-            "security system",
-            "library"
-        ],
-        "discount": 7500
     }
 ]
