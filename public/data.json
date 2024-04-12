@@ -4,8 +4,8 @@
         "images": "single-house.jpg",
         "estate_title": "Single-Family Homes",
         "segment_name": "Segment 1",
-        "description": "Description 1",
-        "price": 100000,
+        "description": "Single-family homes, designed for one family, provide privacy, space, and customization. They're ideal for those valuing independence and stability, offering a range of options from modest to luxurious dwellings",
+        "price": "$100000",
         "status": "sale",
         "area": "1200 sqf",
         "location": "Location 1",
@@ -14,15 +14,15 @@
             "swimming pool",
             "kitchen"
         ],
-        "discount": 5000
+        "discount": "$5000"
     },
     {
         "id": 2,
         "images": "Townhouse.jpg",
         "estate_title": "Townhouses",
         "segment_name": "Segment 2",
-        "description": "Description 2",
-        "price": 150000,
+        "description": "Townhouses are residential properties typically arranged in rows, sharing walls with neighboring units. They offer a blend of space and convenience, often featuring multiple floors with shared walls, providing a sense of community while maintaining some privacy. Townhouses are popular for their efficient use of space and amenities like shared green areas or recreational facilities, appealing to individuals or families seeking a balance between privacy and community living",
+        "price": "$150000",
         "status": "rent",
         "area": "1500 sqf",
         "location": "Location 2",
@@ -31,15 +31,15 @@
             "parking",
             "balcony"
         ],
-        "discount": 7000
+        "discount": "$7000"
     },
     {
         "id": 3,
         "images": "apartment.jpg",
         "estate_title": "Apartments",
         "segment_name": "Segment 3",
-        "description": "Description 3",
-        "price": 120000,
+        "description": "Apartments are multi-unit residential buildings where individual units are leased to tenants. They offer convenience, often including amenities like fitness centers or pools. Ideal for individuals or small families seeking low-maintenance living in urban or suburban settings, apartments provide varying floor plans and lease options, making them versatile for diverse lifestyles",
+        "price": "$120000",
         "status": "sale",
         "area": "1000 sqf",
         "location": "Location 3",
@@ -48,15 +48,15 @@
             "security",
             "garage"
         ],
-        "discount": 4000
+        "discount": "$4000"
     },
     {
         "id": 4,
         "images": "student-house.jpg",
         "estate_title": "Student Housing",
         "segment_name": "Segment 4",
-        "description": "Description 4",
-        "price": 80000,
+        "description": "Student houses are shared accommodations where students live together, typically near college or university campuses. They offer affordability and a sense of community, with students sharing common areas like kitchens and living rooms. Student houses provide a social atmosphere conducive to collaboration and friendship, making them popular among students seeking a supportive environment for their academic pursuits",
+        "price": "$80000",
         "status": "rent",
         "area": "900 sqf",
         "location": "Location 4",
@@ -65,15 +65,15 @@
             "maid's room",
             "internet"
         ],
-        "discount": 3000
+        "discount": "$3000"
     },
     {
         "id": 5,
         "images": "living-room.jpg",
         "estate_title": "Senior Living Communities",
         "segment_name": "Segment 5",
-        "description": "Description 5",
-        "price": 200000,
+        "description": "Senior living rooms are designed with comfort and accessibility in mind for older adults. They prioritize safety features like handrails and non-slip flooring, along with spacious layouts to accommodate mobility aids. These rooms often feature natural lighting, ergonomic furniture, and easy-to-reach amenities, promoting independence and well-being. Additionally, they may incorporate technology for convenience, such as remote-controlled lighting or temperature settings. Overall, senior living rooms aim to create a peaceful and supportive environment where seniors can age gracefully and maintain their quality of life.",
+        "price": "$200000",
         "status": "sale",
         "area": "1800 sqf",
         "location": "Location 5",
@@ -82,15 +82,15 @@
             "BBQ area",
             "fireplace"
         ],
-        "discount": 10000
+        "discount": "$10000"
     },
     {
         "id": 6,
         "images": "vacation.jpg",
         "estate_title": "Vacation Rentals",
         "segment_name": "Segment 6",
-        "description": "Description 6",
-        "price": 180000,
+        "description": "Vacation residences offer temporary accommodation for travelers seeking relaxation or adventure. They come in various forms including beachfront villas, mountain cabins, or urban apartments. These homes are equipped with amenities like kitchens, living areas, and often feature extras such as private pools or scenic views. Designed for short-term stays, they provide a home-away-from-home experience, allowing guests to unwind and explore new destinations. Whether for romantic getaways, family vacations, or solo adventures, vacation residences offer flexibility and comfort for memorable trips.",
+        "price": "$180000",
         "status": "rent",
         "area": "1600 sqf",
         "location": "Location 6",
@@ -99,57 +99,6 @@
             "sauna",
             "central heating"
         ],
-        "discount": 8000
-    },
-    {
-        "id": 7,
-        "images": "image_url_7",
-        "estate_title": "Title 7",
-        "segment_name": "Segment 7",
-        "description": "Description 7",
-        "price": 90000,
-        "status": "sale",
-        "area": "1100 sqf",
-        "location": "Location 7",
-        "facilities": [
-            "study room",
-            "rooftop terrace",
-            "jacuzzi"
-        ],
-        "discount": 4500
-    },
-    {
-        "id": 8,
-        "images": "image_url_8",
-        "estate_title": "Title 8",
-        "segment_name": "Segment 8",
-        "description": "Description 8",
-        "price": 130000,
-        "status": "rent",
-        "area": "1300 sqf",
-        "location": "Location 8",
-        "facilities": [
-            "bicycle storage",
-            "laundry room",
-            "pet-friendly"
-        ],
-        "discount": 6000
-    },
-    {
-        "id": 9,
-        "images": "image_url_9",
-        "estate_title": "Title 9",
-        "segment_name": "Segment 9",
-        "description": "Description 9",
-        "price": 110000,
-        "status": "sale",
-        "area": "1400 sqf",
-        "location": "Location 9",
-        "facilities": [
-            "game room",
-            "green space",
-            "guest suite"
-        ],
-        "discount": 5500
+        "discount": "$8000"
     }
 ]

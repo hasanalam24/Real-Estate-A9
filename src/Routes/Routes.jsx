@@ -6,6 +6,8 @@ import Login from "../Pages/Home/Login";
 import Contact from "../Pages/Contact/Contact";
 import About from "../Pages/About/About";
 
+import Details from "../Components/Details/Details";
+
 
 const router = createBrowserRouter([
     {
@@ -16,6 +18,11 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
+                loader: () => fetch('data.json')
+            },
+            {
+                path: '/details/:search',
+                element: <Details></Details>,
                 loader: () => fetch('data.json')
             },
             {
