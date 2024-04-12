@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form"
+import { Link } from "react-router-dom";
 
 const Register = () => {
 
@@ -20,6 +21,7 @@ const Register = () => {
             .then(result => {
                 console.log(result)
             })
+
     }
 
     // console.log(watch("example"))
@@ -53,7 +55,7 @@ const Register = () => {
                                 <span className="label-text">PhotoURL</span>
                             </label>
                             <input type="text" placeholder="photo" className="input input-bordered"
-                                {...register("photo")}
+                                {...register("photo", { required: true })}
                             />
                             {errors.photo && <span className='text-red-500'>This field is required</span>}
                         </div>
@@ -74,7 +76,13 @@ const Register = () => {
                             <button className="btn btn-primary">Register</button>
                         </div>
                     </form>
+                    <div className="p-4">
+                        <p>You have an account? Please
+                            <Link to='/login' className="text-green-600"> Login</Link>
+                        </p>
+                    </div>
                 </div>
+
             </div>
         </div>
     );
