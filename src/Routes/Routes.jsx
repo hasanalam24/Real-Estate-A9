@@ -8,6 +8,7 @@ import About from "../Pages/About/About";
 
 import Details from "../Components/Details/Details";
 import Register from "../Pages/Register/Register";
+import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -23,7 +24,9 @@ const router = createBrowserRouter([
             },
             {
                 path: '/details/:search',
-                element: <Details></Details>,
+                element: <PrivateRoute>
+                    <Details></Details>
+                </PrivateRoute>,
                 loader: () => fetch('/data.json')
             },
             {

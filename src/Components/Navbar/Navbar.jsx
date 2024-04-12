@@ -49,11 +49,14 @@ const Navbar = () => {
 
                 </ul>
             </div>
-            <div className="navbar-end space-x-3">
+            <div className="navbar-end space-x-5">
                 {
-                    user?.email ? <div className="indicator">
-                        <span className="indicator-item badge badge-secondary"></span>
-                        <div className="grid w-12 h-12 bg-base-300 place-items-center">Pic</div>
+                    user?.email ? <div className="flex gap-5">
+
+                        <div className="grid w-12 h-12 bg-base-300 place-items-center rounded-full tooltip tooltip-left" data-tip={user.displayName}>
+
+                            <img className="rounded-full" src={user?.photoURL} alt="" />
+                        </div>
                         <div>
                             <button onClick={signOutInUser} className="btn btn-secondary font-bold">Log Out</button>
                         </div>
