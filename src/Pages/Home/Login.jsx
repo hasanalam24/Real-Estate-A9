@@ -6,7 +6,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Login = () => {
 
-    const { signInUser, googleLogin } = useContext(AuthContext)
+    const { signInUser, googleLogin, githubLogin } = useContext(AuthContext)
 
     const {
         register,
@@ -64,8 +64,13 @@ const Login = () => {
                             <Link to='/register' className="text-green-600"> Register</Link>
                         </p>
                     </div>
-                    <div>
-                        <button onClick={() => googleLogin()} className="btn btn-primary">Google</button>
+                    <div className="flex justify-between items-center">
+                        <div>
+                            <button onClick={() => googleLogin()} className="btn btn-primary">Google</button>
+                        </div>
+                        <div>
+                            <button onClick={() => githubLogin()} className="btn btn-primary">Github</button>
+                        </div>
                     </div>
                 </div>
 
