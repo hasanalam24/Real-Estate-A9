@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form"
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
 
@@ -9,7 +11,6 @@ const Register = () => {
     const {
         register,
         handleSubmit,
-
         formState: { errors },
     } = useForm()
     const navigate = useNavigate()
@@ -21,11 +22,14 @@ const Register = () => {
             .then(result => {
                 if (result.user) {
                     navigate(location?.state)
+                    toast("Your registratiion Successfully")
                 }
             })
             .catch(error => {
                 console.log(error.message)
+
             })
+
 
     }
 
@@ -63,6 +67,7 @@ const Register = () => {
                                 {...register("photo", { required: true })}
                             />
                             {errors.photo && <span className='text-red-500'>This field is required</span>}
+
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -80,6 +85,7 @@ const Register = () => {
                         <div className="form-control mt-4">
                             <button className="btn btn-primary font-semibold">Register</button>
                         </div>
+                        <ToastContainer />
                     </form>
                     <div className="p-4">
                         <p>You have an account? Please

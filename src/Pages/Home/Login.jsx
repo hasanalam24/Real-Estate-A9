@@ -2,7 +2,8 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
@@ -24,11 +25,16 @@ const Login = () => {
             .then(result => {
                 if (result.user) {
                     navigate(location?.state || '/')
+
                 }
             })
             .catch(error => {
                 console.log(error.message)
             })
+        if (email && password) {
+            toast("Login Successfully");
+        }
+
     }
 
     const handleLogin = allProvider => {
@@ -36,6 +42,7 @@ const Login = () => {
             .then(result => {
                 if (result.user) {
                     navigate(location?.state || '/')
+
                 }
             })
             .catch(error => {
@@ -74,6 +81,7 @@ const Login = () => {
                         <div className="form-control mt-4">
                             <button className="btn btn-primary font-semibold">Login</button>
                         </div>
+                        <ToastContainer />
                     </form>
                     <div className="p-4">
                         <p>You have an account? Please
