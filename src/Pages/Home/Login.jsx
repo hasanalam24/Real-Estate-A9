@@ -22,7 +22,9 @@ const Login = () => {
         const { email, password } = data
         signInUser(email, password)
             .then(result => {
-                console.log(result)
+                if (result.user) {
+                    navigate(location?.state || '/')
+                }
             })
             .catch(error => {
                 console.log(error.message)
@@ -33,7 +35,7 @@ const Login = () => {
         allProvider()
             .then(result => {
                 if (result.user) {
-                    navigate(location?.state)
+                    navigate(location?.state || '/')
                 }
             })
             .catch(error => {
