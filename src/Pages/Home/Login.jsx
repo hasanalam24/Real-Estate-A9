@@ -45,10 +45,10 @@ const Login = () => {
     }
 
     return (
-        <div className="hero min-h-screen bg-base-200">
-            <div className="hero-content ">
+        <div className="w-3/4 lg:w-1/3 mx-auto bg-base-200">
+            <div className="">
 
-                <div className="card shrink-0 shadow-2xl bg-base-100">
+                <div className=" shrink-0 shadow-2xl bg-base-100">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                         <div className="form-control">
                             <label className="label">
@@ -71,8 +71,8 @@ const Login = () => {
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
                         </div>
-                        <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
+                        <div className="form-control mt-4">
+                            <button className="btn btn-primary font-semibold">Login</button>
                         </div>
                     </form>
                     <div className="p-4">
@@ -80,7 +80,7 @@ const Login = () => {
                             <Link to='/register' className="text-green-600"> Register</Link>
                         </p>
                     </div>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center p-4">
                         <div>
                             <button onClick={() => handleLogin(googleLogin)} className="btn btn-primary">Google</button>
                         </div>

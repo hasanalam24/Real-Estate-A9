@@ -3,12 +3,18 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
+    const { signOutInUser, user } = useContext(AuthContext)
     const navLinks =
 
         <>
             <li>
                 <NavLink to='/'>Home</NavLink>
             </li>
+            {
+                user && <li>
+                    <NavLink to='/profile'> Profile</NavLink>
+                </li>
+            }
             <li>
                 <NavLink to='/UpdateProfile'>Update Profile</NavLink>
             </li>
@@ -25,7 +31,7 @@ const Navbar = () => {
         </>
 
 
-    const { signOutInUser, user } = useContext(AuthContext)
+
 
     return (
         <div className="navbar bg-base-100">
@@ -49,11 +55,11 @@ const Navbar = () => {
 
                 </ul>
             </div>
-            <div className="navbar-end space-x-5">
+            <div className="navbar-end space-x-5 ">
                 {
-                    user?.email ? <div className="flex gap-5">
+                    user?.email ? <div className="flex gap-3 lg:gap-5 items-center">
 
-                        <div className="grid w-12 h-12 bg-base-300 place-items-center rounded-full tooltip tooltip-left" data-tip={user.displayName}>
+                        <div className="grid  w-10 h-10 lg:w-12 lg:h-12 bg-base-300 place-items-center rounded-full tooltip tooltip-left" data-tip={user.displayName}>
 
                             <img className="rounded-full" src={user?.photoURL} alt="" />
                         </div>

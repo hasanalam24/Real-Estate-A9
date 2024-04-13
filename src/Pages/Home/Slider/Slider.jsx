@@ -9,7 +9,7 @@ import { Navigation, Pagination, A11y } from 'swiper/modules';
 const Slider = () => {
     return (
         <div>
-            <Swiper className="mySwiper" modules={[Navigation, Pagination, A11y]}
+            <Swiper className="mySwiper " modules={[Navigation, Pagination, A11y]}
 
                 spaceBetween={50}
                 slidesPerView={1}
@@ -19,16 +19,16 @@ const Slider = () => {
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log('slide change')}>
                 <SwiperSlide>
-                    <img className='h-[700px] w-full' src="/image- 4.jpg" alt="" />
+                    <img className="w-[90%] mx-auto md:w-[98%] md:mx-auto lg:h-[700px] lg:w-full" src="/image- 4.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='h-[700px] w-full' src="/image- 2.jpg" alt="" />
+                    <img className='w-[95%] mx-auto md:w-[98%] md:mx-auto lg:h-[700px] lg:w-full' src="/image- 2.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='h-[700px] w-full' src="/image- 3.jpg" alt="" />
+                    <img className='w-[95%] mx-auto md:w-[98%] md:mx-auto lg:h-[700px] lg:w-full' src="/image- 3.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='h-[700px] w-full' src="/image- 1.jpg" alt="" />
+                    <img className='w-[95%] mx-auto md:w-[98%] md:mx-auto lg:h-[700px] lg:w-full' src="/image- 1.jpg" alt="" />
                 </SwiperSlide>
 
             </Swiper>
