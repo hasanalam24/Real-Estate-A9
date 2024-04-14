@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form"
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
 
@@ -51,6 +52,12 @@ const Register = () => {
 
     return (
         <div className="w-3/4 lg:w-1/3 mx-auto  bg-base-200">
+            <Helmet>
+                <title>
+                    Register
+                </title>
+            </Helmet>
+
             <div className=" ">
 
                 <div className=" shrink-0 shadow-2xl bg-base-100">

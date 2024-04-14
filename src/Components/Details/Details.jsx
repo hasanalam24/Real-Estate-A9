@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 
 
@@ -10,6 +11,9 @@ const Details = () => {
     const { images, estate_title, segment_name, price, description, area, location, facilities, discount } = view
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl">
+            <Helmet>
+                <title>Details</title>
+            </Helmet>
             <figure><img src={images} alt="Album" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{estate_title}</h2>

@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Card from "./Card";
 import Slider from "./Slider/Slider";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -10,6 +11,11 @@ const Home = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>
+                    Home
+                </title>
+            </Helmet>
             <Slider></Slider>
 
             <div>
