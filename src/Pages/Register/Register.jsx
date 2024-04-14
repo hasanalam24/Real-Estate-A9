@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet-async";
 const Register = () => {
 
     const [passError, setPassError] = useState()
-    const { createAccount } = useContext(AuthContext)
+    const { createAccount, updateProfileUser } = useContext(AuthContext)
     const {
         register,
         handleSubmit,
@@ -19,7 +19,7 @@ const Register = () => {
     const location = useLocation()
 
     const onSubmit = (data) => {
-        const { email, password } = data
+        const { email, password, image, fullName } = data
         if (password.length < 6) {
             setPassError('Password should be at least 6 characters or longer')
             return;
@@ -32,13 +32,16 @@ const Register = () => {
             setPassError('Your Password should be at least one Lowercase characters')
             return
         }
-        createAccount(email, password)
-            .then(result => {
-                if (result.user) {
-                    navigate(location?.state)
-                    toast("Your registratiion Successfully")
 
-                }
+        //create user and update user
+        createAccount(email, password)
+            .then(() => {
+                updateProfileUser(fullName, image)
+                    .then(() => {
+                        navigate(location?.state)
+                        toast("Your registratiion Successfully")
+                    })
+
             })
             .catch(error => {
                 console.log(error.message)
