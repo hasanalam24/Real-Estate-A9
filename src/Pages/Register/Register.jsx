@@ -5,16 +5,13 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
-import { FaEye } from "react-icons/fa";
-import { FaEyeSlash } from "react-icons/fa";
-
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
     const [showPass, setShowPass] = useState(false)
     const [passError, setPassError] = useState()
-    const { createAccount, updateProfileUser } = useContext(AuthContext)
 
-
+    const { createAccount } = useContext(AuthContext)
     const {
         register,
         handleSubmit,
@@ -24,7 +21,7 @@ const Register = () => {
     const location = useLocation()
 
     const onSubmit = (data) => {
-        const { email, password, image, fullName } = data
+        const { email, password } = data
         if (password.length < 6) {
             setPassError('Password should be at least 6 characters or longer')
             return;
@@ -37,16 +34,14 @@ const Register = () => {
             setPassError('Your Password should be at least one Lowercase characters')
             return
         }
-
-        //create user and update user
+        //create account
         createAccount(email, password)
-            .then(() => {
-                updateProfileUser(fullName, image)
-                    .then(() => {
-                        navigate(location?.state)
-                        toast("Your registratiion Successfully")
-                    })
+            .then(result => {
+                if (result.user) {
+                    navigate(location?.state)
+                    toast("Your registratiion Successfully")
 
+                }
             })
             .catch(error => {
                 console.log(error.message)
@@ -55,7 +50,6 @@ const Register = () => {
 
 
     }
-
 
 
     return (
@@ -102,7 +96,6 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-
                             <div className="relative">
                                 <input type={showPass ? "text" : "password"} placeholder="password" className="input input-bordered w-full"
                                     {...register("password", { required: true })}
@@ -115,7 +108,6 @@ const Register = () => {
                                     }
                                 </span>
                             </div>
-
                             {/* {errors.password && <span className='text-red-500'>This field is required</span>} */}
                             <span className="text-red-500">{passError}</span>
                             <label className="label">
