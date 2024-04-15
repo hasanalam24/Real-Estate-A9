@@ -22,6 +22,7 @@ const Register = () => {
 
     const onSubmit = (data) => {
         const { email, password } = data
+        // console.log(data)
         if (password.length < 6) {
             setPassError('Password should be at least 6 characters or longer')
             return;
@@ -37,11 +38,13 @@ const Register = () => {
         //create account
         createAccount(email, password)
             .then(result => {
+
                 if (result.user) {
                     navigate(location?.state)
                     toast("Your registratiion Successfully")
 
                 }
+                console.log(result.user)
             })
             .catch(error => {
                 console.log(error.message)
@@ -53,7 +56,7 @@ const Register = () => {
 
 
     return (
-        <div className="w-3/4 lg:w-1/3 mx-auto  bg-base-200">
+        <div className="w-3/4 lg:w-1/3 mx-auto  bg-base-200 animate__animated animate__slideInUp">
             <Helmet>
                 <title>
                     Register

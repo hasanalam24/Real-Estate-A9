@@ -6,6 +6,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
     const { signOutInUser, user } = useContext(AuthContext)
+    console.log(user)
     const navLinks =
 
         <>
@@ -61,7 +62,8 @@ const Navbar = () => {
                 {
                     user?.email ? <div className="flex gap-3 lg:gap-5 items-center">
 
-                        <div className="grid  w-10 h-10 lg:w-12 lg:h-12 bg-base-300 place-items-center rounded-full tooltip tooltip-left" data-tip={user.displayName}>
+                        <div className="grid  w-10 h-10 lg:w-12 lg:h-12 bg-base-300 place-items-center rounded-full tooltip tooltip-left" data-tip={user?.displayName
+                        }>
 
                             <img className="rounded-full" src={user?.photoURL} alt="" />
                         </div>

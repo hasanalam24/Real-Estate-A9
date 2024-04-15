@@ -21,8 +21,8 @@ const Slider = () => {
                 <SwiperSlide>
                     <div className='relative '>
                         <img className="w-[90%]  mx-auto md:w-[98%] md:mx-auto lg:h-[700px] lg:w-full" src="/image- 4.jpg" alt="" />
-                        <div className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center'>
-                            <h1 className='text-3xl font-semibold text-white'>Welcome to Our Spectacular Event: Unveiling New Horizons and Dreams</h1>
+                        <div className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
+                            <h1 className='text-lg lg:text-3xl font-semibold text-white'>Welcome to Our Spectacular Event: Unveiling New Horizons and Dreams</h1>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -30,7 +30,7 @@ const Slider = () => {
                     <div className='relative'>
                         <img className='w-[95%] opacity-75 mx-auto md:w-[98%] md:mx-auto lg:h-[700px] lg:w-full' src="/image- 2.jpg" alt="" />
                         <div className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center'>
-                            <h1 className='text-3xl font-semibold '>Discover the Possibilities: Where Dreams Take Flight and Soar High</h1>
+                            <h1 className='text-lg lg:text-3xl font-semibold '>Discover the Possibilities: Where Dreams Take Flight and Soar High</h1>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -38,7 +38,7 @@ const Slider = () => {
                     <div className='relative  '>
                         <img className='w-[95%] mx-auto md:w-[98%] md:mx-auto lg:h-[700px] lg:w-full' src="/image- 3.jpg" alt="" />
                         <div className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center'>
-                            <h1 className='text-3xl font-semibold text-white'>Journey into Excellence: Where Every Moment Sparks Inspiration</h1>
+                            <h1 className='text-lg lg:text-3xl font-semibold text-white'>Journey into Excellence: Where Every Moment Sparks Inspiration</h1>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -46,7 +46,7 @@ const Slider = () => {
                     <div className='relative'>
                         <img className='w-[95%] mx-auto md:w-[98%] md:mx-auto lg:h-[700px] lg:w-full' src="/image- 1.jpg" alt="" />
                         <div className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center'>
-                            <h1 className='text-3xl font-semibold '>Embrace the Adventure: A World of Wonder Awaits Your Discovery</h1>
+                            <h1 className='text-lg lg:text-3xl font-semibold '>Embrace the Adventure: A World of Wonder Awaits Your Discovery</h1>
                         </div>
                     </div>
                 </SwiperSlide>

@@ -5,15 +5,13 @@ import { useForm } from "react-hook-form"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
-import { FaEye } from "react-icons/fa";
-import { FaEyeSlash } from "react-icons/fa";
+
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 
 const Profile = () => {
-    const [showPass, setShowPass] = useState(false)
-    const [passError, setPassError] = useState()
-    const { createAccount, updateProfileUser, user } = useContext(AuthContext)
+
+    const { updateProfileUser } = useContext(AuthContext)
 
 
     const {
@@ -24,26 +22,16 @@ const Profile = () => {
 
 
     const onSubmit = (data) => {
-        const { email, password, image, fullName } = data
-        if (password.length < 6) {
-            setPassError('Password should be at least 6 characters or longer')
-            return;
-        }
-        else if (!/[A-Z]/.test(password)) {
-            setPassError('Your Password should be at least one Uppercase characters')
-            return
-        }
-        else if (!/[a-z]/.test(password)) {
-            setPassError('Your Password should be at least one Lowercase characters')
-            return
-        }
+        const { name, photo } = data
+
 
         //create user and update user
 
-        updateProfileUser(fullName, image)
-            .then(() => {
+        updateProfileUser(name, photo)
+            .then((result) => {
 
                 toast("Profile Updated")
+                console.log(result.user)
             })
             .catch(error => {
                 console.log(error.message)
@@ -51,8 +39,7 @@ const Profile = () => {
             })
     }
 
-    const [change, setChange] = useState('hi')
-    console.log(change)
+
     return (
         <div className="w-3/4 lg:w-1/3 mx-auto  bg-base-200">
             <Helmet>
@@ -69,7 +56,7 @@ const Profile = () => {
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="text" onChange={e => setChange(e.target.value)} className="input input-bordered"
+                            <input type="text" className="input input-bordered"
                                 {...register("name", { required: true })}
                             />
 
