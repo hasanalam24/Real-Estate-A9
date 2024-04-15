@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "Author": "John Doe",
+        "Author_Image": "/public/client-1.jpeg",
+        "Address": "123 Main Street",
+        "Position": "Frontent Developer"
+    },
+    {
+        "id": 2,
+        "Author": "Jane Smith",
+        "Author_Image": "/public/client-2.jpeg",
+        "Address": "456 Elm Avenue",
+        "Position": "Full-Stack Developer"
+    },
+    {
+        "id": 3,
+        "Author": "Michael Johnson",
+        "Author_Image": "/public/client-3.jpeg",
+        "Address": "789 Oak Lane",
+        "Position": "Backend Developer"
+    },
+    {
+        "id": 4,
+        "Author": "Emily Brown",
+        "Author_Image": "/public/client-4.jpeg",
+        "Address": "1011 Pine Road",
+        "Position": "Frontent Developer"
+    },
+    {
+        "id": 5,
+        "Author": "David Lee",
+        "Author_Image": "/public/client-5.jpeg",
+        "Address": "1213 Cedar Court",
+        "Position": "Full-Stack Developer"
+    },
+    {
+        "id": 6,
+        "Author": "Sarah Wilson",
+        "Author_Image": "/public/client-6.jpeg",
+        "Address": "1415 Maple Drive",
+        "Position": "Backend Developer"
+    },
+    {
+        "id": 7,
+        "Author": "Chris Taylor",
+        "Author_Image": "/public/client-7.jpeg",
+        "Address": "1617 Birch Street",
+        "Position": "Frontent-Developer"
+    },
+    {
+        "id": 8,
+        "Author": "Alex Rodriguez",
+        "Author_Image": "/public/client-8.jpeg",
+        "Address": "1819 Walnut Boulevard",
+        "Position": "Full-Stack Developer"
+    },
+    {
+        "id": 9,
+        "Author": "Jessica Martinez",
+        "Author_Image": "/public/client-9.jpeg",
+        "Address": "2021 Willow Lane",
+        "Position": "Backend Developer"
+    }
+]

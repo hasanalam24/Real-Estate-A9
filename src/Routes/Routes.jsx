@@ -3,7 +3,7 @@ import MainLayout from "../MainLayout/MainLayout";
 import Home from "../Pages/Home/Home";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import Login from "../Pages/Home/Login";
-import Contact from "../Pages/Contact/Contact";
+import Clients from "../Pages/Contact/Clients";
 import About from "../Pages/About/About";
 
 import Details from "../Components/Details/Details";
@@ -51,8 +51,9 @@ const router = createBrowserRouter([
                 element: <Register></Register>
             },
             {
-                path: '/contact',
-                element: <Contact></Contact>
+                path: '/clients',
+                element: <Clients></Clients>,
+                loader: () => fetch('/clientsData.json')
             },
             {
                 path: '/about',
