@@ -9,6 +9,7 @@ const Details = () => {
     const view = loadData.find((data) => data.id == search)
     // console.log(view)
     const { images, estate_title, segment_name, price, description, area, location, facilities, discount } = view
+
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl">
             <Helmet>

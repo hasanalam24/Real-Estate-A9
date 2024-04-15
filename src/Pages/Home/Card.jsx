@@ -5,29 +5,31 @@ import { Link } from "react-router-dom";
 const Card = ({ singleData }) => {
     // console.log(singleData)
 
-    const { estate_title, location, area, images, price, description, id } = singleData;
+    const { estate_title, location, area, images, description, facilities, status, id } = singleData;
 
 
     return (
-        <div className="bg-gray-200 p-2 lg:p-8 rounded-lg flex gap-5 ">
-            <div className="flex-1">
-                <img className="h-full" src={images} alt="" />
-            </div>
-            <div className="flex-1 space-y-3">
-                <h1 className="text-xl font-semibold">{estate_title}</h1>
-                <div>
-                    <p>Price: {price}</p>
-                    <p>Description: {description.slice(0, 50)}...</p>
-                </div>
+        <div className="card  bg-base-100 shadow-xl">
+            <figure className="p-3 "><img className="w-[384px] h-[256px] rounded-xl" src={images} alt="" /></figure>
+            <div className="card-body">
+                <h2 className="card-title">{estate_title}</h2>
+                <p>{description.slice(0, 50)}...</p>
                 <div className="flex justify-between ">
-                    <p>{location}</p>
-                    <p>{area}</p>
+                    <p><span className="font-medium">Area:</span> {area}</p>
+                    <p><span className="font-medium">Status: </span>{status}</p>
                 </div>
-                <Link to={`/details/${id}`}>
-                    <button className="btn btn-primary">View Property</button>
+                <div>
+                    <h3 className="font-semibold">Facilities Here:</h3>
+                    {
+                        facilities.map((facility) => <li key={facility.id}> {facility}</li>)
+                    }
+                </div>
+                <p><span className="font-medium">Location:</span> {location}</p>
+                <Link to={`/details/${id}`} className="card-actions">
+                    <button className="btn btn-primary">More Info..</button>
                 </Link>
             </div>
-        </div >
+        </div>
     );
 };
 
