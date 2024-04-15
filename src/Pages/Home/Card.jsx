@@ -9,7 +9,7 @@ const Card = ({ singleData }) => {
 
 
     return (
-        <div className="card  bg-base-100 shadow-xl">
+        <div className="card  bg-base-100 shadow-xl mb-8">
             <figure className="p-3 "><img className="w-[384px] h-[256px] rounded-xl" src={images} alt="" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{estate_title}</h2>
@@ -26,7 +26,10 @@ const Card = ({ singleData }) => {
                 </div>
                 <p><span className="font-medium">Location:</span> {location}</p>
                 <Link to={`/details/${id}`} className="card-actions">
-                    <button className="btn btn-primary">More Info..</button>
+                    <a href="#_" className="relative inline-flex items-center justify-end px-5 py-3 overflow-hidden font-medium transition-all bg-blue-600 rounded-full hover:bg-white group">
+                        <span className="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-white rounded-full"></span>
+                        <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-600">See Details</span>
+                    </a>
                 </Link>
             </div>
         </div>

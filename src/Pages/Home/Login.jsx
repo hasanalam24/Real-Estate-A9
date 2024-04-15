@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
@@ -6,13 +6,14 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
 import 'animate.css';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
 
     const { signInUser, googleLogin, githubLogin } = useContext(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
-
+    const [showPass, setShowPass] = useState(false)
 
     const {
         register,
@@ -56,17 +57,20 @@ const Login = () => {
     }
 
     return (
-        <div className="w-3/4 lg:w-1/3 mx-auto bg-base-200 animate__animated animate__zoomInDown">
+        <div className="bg-base-200 flex flex-col lg:flex-row lg:gap-20 lg:w-[90%]  mx-auto  p-8 ">
             <Helmet>
                 <title>
                     Login
                 </title>
             </Helmet>
 
+            <div className="lg:w-[40%] flex items-center justify-center animate__animated animate__backInRight mt-8">
+                <img src="/public/LoginPage.png" alt="" />
+            </div>
 
-
-            <div className=" shrink-0 shadow-2xl bg-base-100 ">
-                <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+            <div className=" shrink-0 shadow-2xl  animate__animated animate__backInLeft lg:w-[40%] p-2">
+                <h1 className="text-center text-2xl font-semibold">Please Login</h1>
+                <form onSubmit={handleSubmit(onSubmit)} className="p-4">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
@@ -80,9 +84,18 @@ const Login = () => {
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
-                        <input type="password" placeholder="password" className="input input-bordered"
-                            {...register("password", { required: true })}
-                        />
+                        <div className="relative">
+                            <input type={showPass ? "text" : "password"} placeholder="password" className="input input-bordered w-full"
+                                {...register("password", { required: true })}
+
+                            />
+                            <span className="absolute top-4 right-3" onClick={() => setShowPass(!showPass)}>
+
+                                {
+                                    showPass ? <FaEyeSlash className="text-xl"></FaEyeSlash> : <FaEye className="text-xl"></FaEye>
+                                }
+                            </span>
+                        </div>
                         {errors.password && <span className="text-red-500">This field is required</span>}
                         <label className="label">
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
@@ -107,6 +120,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+
 
 
         </div>
