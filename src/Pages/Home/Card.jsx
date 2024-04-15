@@ -21,7 +21,7 @@ const Card = ({ singleData }) => {
                 <div>
                     <h3 className="font-semibold">Facilities Here:</h3>
                     {
-                        facilities.map((facility) => <li key={facility.id}> {facility}</li>)
+                        facilities.map((facility, idx) => <li key={facility.idx}> {facility}</li>)
                     }
                 </div>
                 <p><span className="font-medium">Location:</span> {location}</p>
