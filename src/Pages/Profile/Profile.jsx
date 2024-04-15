@@ -39,23 +39,20 @@ const Profile = () => {
         }
 
         //create user and update user
-        createAccount(email, password)
+
+        updateProfileUser(fullName, image)
             .then(() => {
-                updateProfileUser(fullName, image)
-                    .then(() => {
 
-                        toast("Profile Updated")
-                    })
-
+                toast("Profile Updated")
             })
             .catch(error => {
                 console.log(error.message)
 
             })
-
-
     }
 
+    const [change, setChange] = useState('hi')
+    console.log(change)
     return (
         <div className="w-3/4 lg:w-1/3 mx-auto  bg-base-200">
             <Helmet>
@@ -72,52 +69,28 @@ const Profile = () => {
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="text" value={user.displayName} className="input input-bordered"
+                            <input type="text" onChange={e => setChange(e.target.value)} className="input input-bordered"
                                 {...register("name", { required: true })}
                             />
+
                             {errors.name && <span className='text-red-500'>This field is required</span>}
                         </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Email</span>
-                            </label>
-                            <input type="email" placeholder={user.email} className="input input-bordered"
-                                {...register("email", { required: true })}
-                            />
-                            {errors.email && <span className='text-red-500'>This field is required</span>}
-                        </div>
+
+
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">PhotoURL</span>
                             </label>
-                            <input type="text" value={user.photoURL} className="input input-bordered"
+                            <input type="text" className="input input-bordered"
                                 {...register("photo", { required: true })}
                             />
                             {errors.photo && <span className='text-red-500'>This field is required</span>}
 
                         </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Password</span>
-                            </label>
 
-                            <div className="relative">
-                                <input type={showPass ? "text" : "password"} placeholder="password" className="input input-bordered w-full"
-                                    {...register("password", { required: true })}
 
-                                />
-                                <span className="absolute top-4 right-3" onClick={() => setShowPass(!showPass)}>
 
-                                    {
-                                        showPass ? <FaEyeSlash className="text-xl"></FaEyeSlash> : <FaEye className="text-xl"></FaEye>
-                                    }
-                                </span>
-                            </div>
 
-                            {/* {errors.password && <span className='text-red-500'>This field is required</span>} */}
-                            <span className="text-red-500">{passError}</span>
-
-                        </div>
                         <div className="form-control mt-4">
                             <button className="btn btn-primary font-semibold">Save Change</button>
                         </div>
