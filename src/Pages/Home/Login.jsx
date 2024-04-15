@@ -106,18 +106,22 @@ const Login = () => {
                     </div>
                     <ToastContainer />
                 </form>
-                <div className="p-4">
-                    <p>You have an account? Please
-                        <Link to='/register' className="text-green-600"> Register</Link>
-                    </p>
+
+                <div className="flex gap-5 items-center p-4">
+                    <div onClick={() => handleLogin(googleLogin)} className="w-12 h-12 bg-gray-200 rounded-xl">
+                        <img src="/public/google-logo.png" alt="" />
+
+                    </div>
+                    <div onClick={() => handleLogin(githubLogin)} className="w-12 h-12 bg-gray-200 rounded-xl">
+                        <img src="/public/github-logo.png" alt="" />
+
+                    </div>
                 </div>
-                <div className="flex justify-between items-center p-4">
-                    <div>
-                        <button onClick={() => handleLogin(googleLogin)} className="btn btn-primary">Google</button>
-                    </div>
-                    <div>
-                        <button onClick={() => handleLogin(githubLogin)} className="btn btn-primary">Github</button>
-                    </div>
+                <div className="p-4 flex gap-2">
+                    <p>Don't have an account? Please
+                        <Link to='/register' className="text-green-600 font-semibold"> Register</Link>
+                    </p>
+                    <p>here</p>
                 </div>
             </div>
 
