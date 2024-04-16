@@ -1,12 +1,8 @@
 import { Link } from "react-router-dom";
 
+const Card = ({ data }) => {
 
-
-const Card = ({ singleData }) => {
-    // console.log(singleData)
-
-    const { estate_title, location, area, images, description, facilities, status, id } = singleData;
-
+    const { estate_title, location, area, images, description, facilities, status, id } = data;
 
     return (
         <div className="card  bg-base-100 shadow-xl mb-8">

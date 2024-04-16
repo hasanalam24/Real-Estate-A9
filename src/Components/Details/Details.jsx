@@ -8,7 +8,7 @@ const Details = () => {
     const { images, estate_title, price, description, area, location, facilities, discount, status } = viewData
 
     return (
-        <div className="card lg:card-side bg-base-100 shadow-xl">
+        <div className="card lg:card-side bg-base-100 shadow-xl mb-8 p-3">
             <Helmet>
                 <title>
                     DH | Details

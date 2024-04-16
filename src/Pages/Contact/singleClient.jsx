@@ -2,11 +2,12 @@ import { Helmet } from "react-helmet-async";
 
 const SingleClient = ({ client }) => {
     const { id, Author, Author_Image, Address, Position } = client
+
     return (
         <div className="flex flex-col justify-center  p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
             <Helmet>
                 <title>
-                    Clients
+                    DH | Clients
                 </title>
             </Helmet>
             <img src={Author_Image} alt="" className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square" />

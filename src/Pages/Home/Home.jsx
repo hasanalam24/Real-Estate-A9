@@ -8,7 +8,6 @@ import 'animate.css';
 const Home = () => {
     const allData = useLoaderData()
 
-
     return (
         <div>
             <Helmet>
@@ -18,7 +17,6 @@ const Home = () => {
             </Helmet>
             <Slider></Slider>
 
-
             <div>
                 <div className="mt-10 text-center">
                     <h1 className="text-2xl lg:text-4xl font-semibold">Our Estate.We've Sale and Rent more than <br /> 200 Houses this year!</h1>
@@ -26,7 +24,7 @@ const Home = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 overflow-x-hidden animate__animated animate__fadeInUpBig">
                     {
-                        allData.map((singleData) => <Card singleData={singleData} key={singleData.id}></Card>)
+                        allData.map((data) => <Card data={data} key={data.id}></Card>)
                     }
                 </div>
 

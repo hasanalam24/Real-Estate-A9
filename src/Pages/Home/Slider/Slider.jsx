@@ -3,7 +3,6 @@ import 'swiper/swiper-bundle.css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-
 import { Navigation, Pagination, A11y } from 'swiper/modules';
 
 const Slider = () => {

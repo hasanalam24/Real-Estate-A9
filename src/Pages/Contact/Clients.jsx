@@ -10,7 +10,7 @@ const Clients = () => {
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-3 mt-8 animate__animated animate__backInUp">
             <Helmet>
                 <title>
-                    Clients
+                    DH | Clients
                 </title>
             </Helmet>
             {
