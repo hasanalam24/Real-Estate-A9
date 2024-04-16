@@ -56,18 +56,17 @@ const Register = () => {
 
 
     return (
-        <div className="bg-base-200 flex flex-col lg:flex-row lg:gap-20 lg:w-[90%] mx-auto p-8 ">
+
+        <div className="relative ">
             <Helmet>
                 <title>
-                    Register
+                    Dream House | Register
                 </title>
             </Helmet>
-            <div className="lg:w-[40%] flex items-center justify-center animate__animated animate__backInLeft mt-8">
-                <img src="https://i.ibb.co/L650dVF/login-img02-removebg-preview.png" alt="" />
-            </div>
 
+            <img className="h-[600px] w-full" src="https://i.ibb.co/SNGT9By/vecteezy-blurred-water-background-2030333.jpg" alt="" />
 
-            <div className=" shrink-0 shadow-2xl  animate__animated animate__backInRight lg:w-[40%] p-2">
+            <div className="w-3/4 lg:w-1/3 mb-5 mx-auto absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-2 shrink-0 shadow-2xl">
                 <h1 className="text-center text-2xl font-semibold">Welcome!</h1>
                 <form onSubmit={handleSubmit(onSubmitBtn)} className="p-4">
                     <div className="form-control">
@@ -114,14 +113,14 @@ const Register = () => {
                                 }
                             </span>
                         </div>
-                        {/* {errors.password && <span className='text-red-500'>This field is required</span>} */}
+
                         <span className="text-red-500">{passError}</span>
                         <label className="label">
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                     </div>
                     <div className="form-control mt-4">
-                        <button className="btn btn-primary font-semibold">Register</button>
+                        <button className="btn btn-secondary font-semibold">Register</button>
                     </div>
                     <ToastContainer />
                 </form>

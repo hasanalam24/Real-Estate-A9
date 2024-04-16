@@ -12,7 +12,7 @@ const UserProfile = () => {
         <div className="w-3/4 lg:w-1/3 mb-5 mx-auto  bg-base-200">
             <Helmet>
                 <title>
-                    User Profile
+                    DH | User Profile
                 </title>
             </Helmet>
 
