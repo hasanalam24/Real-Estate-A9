@@ -65,7 +65,7 @@ const Login = () => {
             </Helmet>
 
             <div className="lg:w-[40%] flex items-center justify-center animate__animated animate__backInRight mt-8">
-                <img src="/public/LoginPage.png" alt="" />
+                <img src="https://i.ibb.co/6B52Zrw/Login-Page.png" alt="" />
             </div>
 
             <div className=" shrink-0 shadow-2xl  animate__animated animate__backInLeft lg:w-[40%] p-2">
@@ -109,11 +109,11 @@ const Login = () => {
 
                 <div className="flex gap-5 items-center p-4">
                     <div onClick={() => handleLogin(googleLogin)} className="w-12 h-12 bg-gray-200 rounded-xl">
-                        <img src="/public/google-logo.png" alt="" />
+                        <img src="https://i.ibb.co/cLDFfkY/google-logo.png" alt="" />
 
                     </div>
                     <div onClick={() => handleLogin(githubLogin)} className="w-12 h-12 bg-gray-200 rounded-xl">
-                        <img src="/public/github-logo.png" alt="" />
+                        <img src="https://i.ibb.co/Mp0sLB2/github-logo.png" alt="" />
 
                     </div>
                 </div>

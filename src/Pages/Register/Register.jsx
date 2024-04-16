@@ -63,7 +63,7 @@ const Register = () => {
                 </title>
             </Helmet>
             <div className="lg:w-[40%] flex items-center justify-center animate__animated animate__backInRight mt-8">
-                <img src="/public/LoginPage.png" alt="" />
+                <img src="https://i.ibb.co/6B52Zrw/Login-Page.png" alt="" />
             </div>
 
 

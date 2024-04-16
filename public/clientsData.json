@@ -2,63 +2,63 @@
     {
         "id": 1,
         "Author": "John Doe",
-        "Author_Image": "/public/client-1.jpeg",
+        "Author_Image": "https://i.ibb.co/rFRKyBw/client-1.jpg",
         "Address": "123 Main Street",
         "Position": "Frontent Developer"
     },
     {
         "id": 2,
         "Author": "Jane Smith",
-        "Author_Image": "/public/client-2.jpeg",
+        "Author_Image": "https://i.ibb.co/tD4g6rS/client-2.jpg",
         "Address": "456 Elm Avenue",
         "Position": "Full-Stack Developer"
     },
     {
         "id": 3,
         "Author": "Michael Johnson",
-        "Author_Image": "/public/client-3.jpeg",
+        "Author_Image": "https://i.ibb.co/qg1SZJD/client-3.jpg",
         "Address": "789 Oak Lane",
         "Position": "Backend Developer"
     },
     {
         "id": 4,
         "Author": "Emily Brown",
-        "Author_Image": "/public/client-4.jpeg",
+        "Author_Image": "https://i.ibb.co/bLfvYRG/client-4.jpg",
         "Address": "1011 Pine Road",
         "Position": "Frontent Developer"
     },
     {
         "id": 5,
         "Author": "David Lee",
-        "Author_Image": "/public/client-5.jpeg",
+        "Author_Image": "https://i.ibb.co/92qJSyp/client-5.jpg",
         "Address": "1213 Cedar Court",
         "Position": "Full-Stack Developer"
     },
     {
         "id": 6,
         "Author": "Sarah Wilson",
-        "Author_Image": "/public/client-6.jpeg",
+        "Author_Image": "https://i.ibb.co/W0mH1Kc/client-6.jpg",
         "Address": "1415 Maple Drive",
         "Position": "Backend Developer"
     },
     {
         "id": 7,
         "Author": "Chris Taylor",
-        "Author_Image": "/public/client-7.jpeg",
+        "Author_Image": "https://i.ibb.co/wrjJ4xQ/client-7.jpg",
         "Address": "1617 Birch Street",
         "Position": "Frontent-Developer"
     },
     {
         "id": 8,
         "Author": "Alex Rodriguez",
-        "Author_Image": "/public/client-8.jpeg",
+        "Author_Image": "https://i.ibb.co/p020XnC/client-8.jpg",
         "Address": "1819 Walnut Boulevard",
         "Position": "Full-Stack Developer"
     },
     {
         "id": 9,
         "Author": "Jessica Martinez",
-        "Author_Image": "/public/client-9.jpeg",
+        "Author_Image": "https://i.ibb.co/qg1SZJD/client-3.jpg",
         "Address": "2021 Willow Lane",
         "Position": "Backend Developer"
     }
