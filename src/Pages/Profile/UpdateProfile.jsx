@@ -23,7 +23,7 @@ const UpdateProfile = () => {
 
     const onSubmit = (data) => {
         const { name, image } = data
-
+        console.log(data)
 
         //create user and update user
 
@@ -71,10 +71,10 @@ const UpdateProfile = () => {
                             <label className="label">
                                 <span className="label-text">PhotoURL</span>
                             </label>
-                            <input value={user.photoURL} type="text" className="input input-bordered"
-                                {...register("photo", { required: true })}
+                            <input onChange={handleChange} defaultValue={user.photoURL} value={changeValue} type="text" className="input input-bordered"
+                                {...register("image", { required: true })}
                             />
-                            {errors.photo && <span className='text-red-500'>This field is required</span>}
+                            {errors.image && <span className='text-red-500'>This field is required</span>}
 
                         </div>
 
