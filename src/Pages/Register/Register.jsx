@@ -60,7 +60,7 @@ const Register = () => {
         <div className="relative ">
             <Helmet>
                 <title>
-                    DH| Register
+                    DH | Register
                 </title>
             </Helmet>
 
