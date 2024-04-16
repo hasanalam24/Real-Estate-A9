@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form"
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
@@ -18,7 +18,7 @@ const Register = () => {
         formState: { errors },
     } = useForm()
     const navigate = useNavigate()
-    const location = useLocation()
+
 
     const onSubmitBtn = data => {
         const { email, password, name, image } = data
@@ -39,12 +39,11 @@ const Register = () => {
         // create account
         createAccount(email, password)
             .then(() => {
+
+                toast("Your registratiion Successfully")
                 updateUserProfile(name, image)
                     .then(() => {
-
-                        navigate(location?.state)
-                        toast("Your registratiion Successfully")
-
+                        navigate("/")
 
                     })
                     .catch(error => {
@@ -53,9 +52,6 @@ const Register = () => {
                     })
 
             })
-
-
-
     }
 
 
@@ -79,7 +75,7 @@ const Register = () => {
                             <span className="label-text">Name</span>
                         </label>
                         <input type="text" placeholder="Name" className="input input-bordered"
-                            {...register("name", { required: false })}
+                            {...register("name", { required: true })}
                         />
                         {errors.name && <span className='text-red-500'>This field is required</span>}
                     </div>
@@ -88,7 +84,7 @@ const Register = () => {
                             <span className="label-text">Email</span>
                         </label>
                         <input type="email" placeholder="email" className="input input-bordered"
-                            {...register("email", { required: false })}
+                            {...register("email", { required: true })}
                         />
                         {errors.email && <span className='text-red-500'>This field is required</span>}
                     </div>
@@ -97,7 +93,7 @@ const Register = () => {
                             <span className="label-text">PhotoURL</span>
                         </label>
                         <input type="text" placeholder="photo" className="input input-bordered"
-                            {...register("image", { required: false })}
+                            {...register("image", { required: true })}
                         />
                         {errors.image && <span className='text-red-500'>This field is required</span>}
 
@@ -108,7 +104,7 @@ const Register = () => {
                         </label>
                         <div className="relative">
                             <input type={showPass ? "text" : "password"} placeholder="password" className="input input-bordered w-full"
-                                {...register("password", { required: false })}
+                                {...register("password", { required: true })}
 
                             />
                             <span className="absolute top-4 right-3" onClick={() => setShowPass(!showPass)}>

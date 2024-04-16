@@ -20,6 +20,11 @@ const Navbar = () => {
             }
 
 
+            {
+                user && <li>
+                    <NavLink to='/userprofile'>User Profile</NavLink>
+                </li>
+            }
             <li>
                 <NavLink to='/register'>Register</NavLink>
             </li>
@@ -70,6 +75,7 @@ const Navbar = () => {
                             <button onClick={signOutInUser} className="btn btn-secondary font-bold">Log Out</button>
                         </div>
                     </div>
+
                         :
                         <Link to='/login' >
                             <button className="btn btn-secondary font-bold">Login</button>

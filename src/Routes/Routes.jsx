@@ -12,6 +12,7 @@ import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
 
 import ErrorHandle from "../Components/ErrorHandle/ErrorHandle";
 import UpdateProfile from "../Pages/Profile/UpdateProfile";
+import UserProfile from "../Pages/Profile/UserProfile";
 
 
 const router = createBrowserRouter([
@@ -38,6 +39,12 @@ const router = createBrowserRouter([
                 path: '/updateprofile',
                 element: <PrivateRoute>
                     <UpdateProfile></UpdateProfile>
+                </PrivateRoute>
+            },
+            {
+                path: '/userprofile',
+                element: <PrivateRoute>
+                    <UserProfile></UserProfile>
                 </PrivateRoute>
             },
             {

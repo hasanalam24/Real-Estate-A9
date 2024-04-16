@@ -5,9 +5,7 @@ import { useForm } from "react-hook-form"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
-
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-
 
 const UpdateProfile = () => {
 
@@ -28,10 +26,10 @@ const UpdateProfile = () => {
         //create user and update user
 
         updateUserProfile(name, image)
-            .then((result) => {
+            .then(() => {
 
                 toast("Profile Updated")
-                console.log(result.user)
+
             })
             .catch(error => {
                 console.log(error.message)
