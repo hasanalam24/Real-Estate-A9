@@ -10,7 +10,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
 
-    const { signInUser, googleLogin, githubLogin, facebookLogin } = useContext(AuthContext)
+    const { signInUser, googleLogin, githubLogin } = useContext(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
     const [showPass, setShowPass] = useState(false)
@@ -117,10 +117,7 @@ const Login = () => {
                         <img src="https://i.ibb.co/cLDFfkY/google-logo.png" alt="" />
 
                     </div>
-                    <div onClick={() => handleLogin(facebookLogin)} className="w-12 h-12 bg-gray-200 rounded-xl">
-                        <img src="https://i.ibb.co/3Fs7bXj/facebook-logo.png" alt="" />
 
-                    </div>
                 </div>
                 <div className="p-4 flex gap-2">
                     <p>Don't have an account? Please
