@@ -65,11 +65,11 @@ const Login = () => {
                 </title>
             </Helmet>
 
-            <div className="lg:w-[40%] flex items-center justify-center animate__animated animate__backInRight mt-8">
-                <img src="https://i.ibb.co/6B52Zrw/Login-Page.png" alt="" />
+            <div className="lg:w-[40%] flex items-center justify-center animate__animated animate__backInLeft mt-8">
+                <img src="https://i.ibb.co/zRX8dHQ/Login-removebg-preview.png" alt="" />
             </div>
 
-            <div className=" shrink-0 shadow-2xl  animate__animated animate__backInLeft lg:w-[40%] p-2">
+            <div className=" shrink-0 shadow-2xl  animate__animated animate__backInRight lg:w-[40%] p-2">
                 <h1 className="text-center text-2xl font-semibold">Please Login</h1>
                 <form onSubmit={handleSubmit(onSubmit)} className="p-4">
                     <div className="form-control">
