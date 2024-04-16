@@ -2,8 +2,9 @@
 
 const Footer = () => {
     return (
-        <footer className="bg-base-200 p-4 lg:p-10">
-            <div className="grid grid-cols-2 gap-5 lg:flex lg:justify-between w-[90%] mx-auto text-base-content mt-10">
+        <footer className="bg-gray-200 mt-8 p-4 lg:p-10 text-center">
+
+            <div className=" grid grid-cols-1 gap-5 lg:flex lg:justify-between w-[90%] mx-auto text-base-content">
                 <nav className="flex flex-col">
                     <h6 className="footer-title">Services</h6>
                     <a className="link link-hover">Branding</a>
@@ -24,12 +25,9 @@ const Footer = () => {
                     <a className="link link-hover">Privacy policy</a>
                     <a className="link link-hover">Cookie policy</a>
                 </nav>
-                <form className="mr-4">
+                <form className="">
                     <h6 className="footer-title">Newsletter</h6>
-                    <fieldset className="form-control">
-                        <label className="label">
-                            <span className="label-text">Enter your email address</span>
-                        </label>
+                    <fieldset className="form-control text-center mt-3">
                         <div className="lg:join">
                             <input type="text" placeholder="username@site.com" className="input input-bordered join-item" />
                             <button className="btn btn-secondary join-item">Login</button>

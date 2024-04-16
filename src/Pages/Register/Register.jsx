@@ -6,6 +6,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import 'animate.css';
+
 
 const Register = () => {
     const [passwordShow, setPasswordShow] = useState(false)
@@ -66,7 +68,7 @@ const Register = () => {
 
             <img className="h-[600px] w-full" src="https://i.ibb.co/SNGT9By/vecteezy-blurred-water-background-2030333.jpg" alt="" />
 
-            <div className="w-3/4 lg:w-1/3 mb-5 mx-auto absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-2 shrink-0 shadow-2xl">
+            <div className="w-3/4 lg:w-1/3 mb-5 mx-auto absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-2 shrink-0 shadow-2xl animate__animated animate__zoomInDown">
                 <h1 className="text-center text-2xl font-semibold">Welcome!</h1>
                 <form onSubmit={handleSubmit(onSubmitBtn)} className="p-4">
                     <div className="form-control">
@@ -122,7 +124,7 @@ const Register = () => {
                     <div className="form-control mt-4">
                         <button className="btn btn-secondary font-semibold">Register</button>
                     </div>
-                    <ToastContainer />
+
                 </form>
                 <div className="p-4 flex gap-2">
                     <p>Already have an account? Please
@@ -131,7 +133,7 @@ const Register = () => {
                     <p> here</p>
                 </div>
             </div>
-
+            <ToastContainer />
 
         </div>
     );

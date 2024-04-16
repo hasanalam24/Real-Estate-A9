@@ -67,7 +67,7 @@ const Login = () => {
 
             <img className="h-[600px] w-full" src="https://i.ibb.co/SNGT9By/vecteezy-blurred-water-background-2030333.jpg" alt="" />
 
-            <div className="w-3/4 lg:w-1/3 mb-5 mx-auto absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-2 shrink-0 shadow-2xl">
+            <div className="w-3/4 lg:w-1/3 mb-5 mx-auto absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-2 shrink-0 shadow-2xl animate__animated animate__zoomInDown">
                 <h1 className="text-center text-2xl font-semibold">Please Login</h1>
                 <form onSubmit={handleSubmit(onSubmit)} className="p-4">
                     <div className="form-control">

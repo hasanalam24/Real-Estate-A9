@@ -4,6 +4,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import 'animate.css';
+
 
 const UpdateProfile = () => {
     const { updateUserProfile, user } = useContext(AuthContext)
@@ -44,7 +46,7 @@ const UpdateProfile = () => {
                 </title>
             </Helmet>
             <img className="h-[400px] w-full" src="https://i.ibb.co/SNGT9By/vecteezy-blurred-water-background-2030333.jpg" alt="" />
-            <div className="w-3/4 lg:w-1/3 mb-5 mx-auto absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+            <div className="animate__animated animate__zoomInDown w-3/4 lg:w-1/3 mb-5 mx-auto absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
 
                 <div className="shrink-0 shadow-2xl">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
