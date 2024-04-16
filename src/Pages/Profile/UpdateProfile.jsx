@@ -40,7 +40,7 @@ const UpdateProfile = () => {
         <div className="relative">
             <Helmet>
                 <title>
-                    Dream House | Update Profile
+                    DH | Update Profile
                 </title>
             </Helmet>
             <img className="h-[400px] w-full" src="https://i.ibb.co/SNGT9By/vecteezy-blurred-water-background-2030333.jpg" alt="" />
@@ -69,7 +69,7 @@ const UpdateProfile = () => {
 
                         </div>
                         <div className="form-control mt-4">
-                            <button className="btn btn-primary font-semibold">Save Change</button>
+                            <button className="btn btn-secondary font-semibold">Save Change</button>
                         </div>
 
                     </form>

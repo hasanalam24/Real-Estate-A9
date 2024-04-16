@@ -9,14 +9,16 @@ const UserProfile = () => {
 
 
     return (
-        <div className="w-3/4 lg:w-1/3 mb-5 mx-auto  bg-base-200">
+        <div className="relative">
             <Helmet>
                 <title>
                     DH | User Profile
                 </title>
             </Helmet>
 
-            <div className="max-w-md p-8 sm:flex sm:space-x-6 dark:bg-gray-50 dark:text-gray-800">
+            <img className="h-[300px] w-full" src="https://i.ibb.co/SNGT9By/vecteezy-blurred-water-background-2030333.jpg" alt="" />
+
+            <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-2 shrink-0 shadow-2xl max-w-md  sm:flex sm:space-x-6 dark:bg-gray-50 dark:text-gray-800">
                 <div className="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
                     <img src={user.photoURL} alt="" className="object-cover object-center w-full h-full rounded dark:bg-gray-500" />
                 </div>

@@ -8,8 +8,8 @@ import { Helmet } from "react-helmet-async";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-    const [showPass, setShowPass] = useState(false)
-    const [passError, setPassError] = useState()
+    const [passwordShow, setPasswordShow] = useState(false)
+    const [errorMessage, setErrorMessager] = useState()
 
     const { createUser, updateUserProfile } = useContext(AuthContext)
     const {
@@ -25,15 +25,15 @@ const Register = () => {
         console.log(data)
         console.log(data)
         if (password.length < 6) {
-            setPassError('Password should be at least 6 characters or longer')
+            setErrorMessager('Password should be at least 6 characters or longer')
             return;
         }
         else if (!/[A-Z]/.test(password)) {
-            setPassError('Your Password should be at least one Uppercase characters')
+            setErrorMessager('Your Password should be at least one Uppercase characters')
             return
         }
         else if (!/[a-z]/.test(password)) {
-            setPassError('Your Password should be at least one Lowercase characters')
+            setErrorMessager('Your Password should be at least one Lowercase characters')
             return
         }
         // create account
@@ -60,7 +60,7 @@ const Register = () => {
         <div className="relative ">
             <Helmet>
                 <title>
-                    Dream House | Register
+                    DH| Register
                 </title>
             </Helmet>
 
@@ -102,19 +102,19 @@ const Register = () => {
                             <span className="label-text">Password</span>
                         </label>
                         <div className="relative">
-                            <input type={showPass ? "text" : "password"} placeholder="password" className="input input-bordered w-full"
+                            <input type={passwordShow ? "text" : "password"} placeholder="password" className="input input-bordered w-full"
                                 {...register("password", { required: true })}
 
                             />
-                            <span className="absolute top-4 right-3" onClick={() => setShowPass(!showPass)}>
+                            <span className="absolute top-4 right-3" onClick={() => setPasswordShow(!passwordShow)}>
 
                                 {
-                                    showPass ? <FaEyeSlash className="text-xl"></FaEyeSlash> : <FaEye className="text-xl"></FaEye>
+                                    passwordShow ? <FaEyeSlash className="text-xl"></FaEyeSlash> : <FaEye className="text-xl"></FaEye>
                                 }
                             </span>
                         </div>
 
-                        <span className="text-red-500">{passError}</span>
+                        <span className="text-red-500">{errorMessage}</span>
                         <label className="label">
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
@@ -126,7 +126,7 @@ const Register = () => {
                 </form>
                 <div className="p-4 flex gap-2">
                     <p>Already have an account? Please
-                        <Link to='/login' className="text-green-600 font-semibold"> Login</Link>
+                        <Link to='/login' className="text-secondary font-semibold"> Login</Link>
                     </p>
                     <p> here</p>
                 </div>
