@@ -11,7 +11,7 @@ const Register = () => {
     const [showPass, setShowPass] = useState(false)
     const [passError, setPassError] = useState()
 
-    const { createAccount } = useContext(AuthContext)
+    const { createAccount, updateUserProfile } = useContext(AuthContext)
     const {
         register,
         handleSubmit,
@@ -20,9 +20,10 @@ const Register = () => {
     const navigate = useNavigate()
     const location = useLocation()
 
-    const onSubmit = (data) => {
-        const { email, password } = data
-        // console.log(data)
+    const onSubmitBtn = data => {
+        const { email, password, name, image } = data
+        console.log(data)
+        console.log(data)
         if (password.length < 6) {
             setPassError('Password should be at least 6 characters or longer')
             return;
@@ -35,21 +36,24 @@ const Register = () => {
             setPassError('Your Password should be at least one Lowercase characters')
             return
         }
-        //create account
+        // create account
         createAccount(email, password)
-            .then(result => {
+            .then(() => {
+                updateUserProfile(name, image)
+                    .then(() => {
 
-                if (result.user) {
-                    navigate(location?.state)
-                    toast("Your registratiion Successfully")
+                        navigate(location?.state)
+                        toast("Your registratiion Successfully")
 
-                }
-                console.log(result.user)
+
+                    })
+                    .catch(error => {
+                        console.log(error.message)
+
+                    })
+
             })
-            .catch(error => {
-                console.log(error.message)
 
-            })
 
 
     }
@@ -69,13 +73,13 @@ const Register = () => {
 
             <div className=" shrink-0 shadow-2xl  animate__animated animate__backInLeft lg:w-[40%] p-2">
                 <h1 className="text-center text-2xl font-semibold">Welcome!</h1>
-                <form onSubmit={handleSubmit(onSubmit)} className="p-4">
+                <form onSubmit={handleSubmit(onSubmitBtn)} className="p-4">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
                         <input type="text" placeholder="Name" className="input input-bordered"
-                            {...register("name", { required: true })}
+                            {...register("name", { required: false })}
                         />
                         {errors.name && <span className='text-red-500'>This field is required</span>}
                     </div>
@@ -84,7 +88,7 @@ const Register = () => {
                             <span className="label-text">Email</span>
                         </label>
                         <input type="email" placeholder="email" className="input input-bordered"
-                            {...register("email", { required: true })}
+                            {...register("email", { required: false })}
                         />
                         {errors.email && <span className='text-red-500'>This field is required</span>}
                     </div>
@@ -93,9 +97,9 @@ const Register = () => {
                             <span className="label-text">PhotoURL</span>
                         </label>
                         <input type="text" placeholder="photo" className="input input-bordered"
-                            {...register("photo", { required: true })}
+                            {...register("image", { required: false })}
                         />
-                        {errors.photo && <span className='text-red-500'>This field is required</span>}
+                        {errors.image && <span className='text-red-500'>This field is required</span>}
 
                     </div>
                     <div className="form-control">
@@ -104,7 +108,7 @@ const Register = () => {
                         </label>
                         <div className="relative">
                             <input type={showPass ? "text" : "password"} placeholder="password" className="input input-bordered w-full"
-                                {...register("password", { required: true })}
+                                {...register("password", { required: false })}
 
                             />
                             <span className="absolute top-4 right-3" onClick={() => setShowPass(!showPass)}>

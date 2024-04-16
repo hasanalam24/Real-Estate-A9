@@ -10,7 +10,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
 
-    const { signInUser, googleLogin, githubLogin } = useContext(AuthContext)
+    const { signInUser, googleLogin, githubLogin, facebookLogin } = useContext(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
     const [showPass, setShowPass] = useState(false)
@@ -55,6 +55,7 @@ const Login = () => {
             })
 
     }
+
 
     return (
         <div className="bg-base-200 flex flex-col lg:flex-row lg:gap-20 lg:w-[90%]  mx-auto  p-8 ">
@@ -108,12 +109,16 @@ const Login = () => {
                 </form>
 
                 <div className="flex gap-5 items-center p-4">
+                    <div onClick={() => handleLogin(githubLogin)} className="w-12 h-12 bg-gray-200 rounded-xl">
+                        <img src="https://i.ibb.co/Mp0sLB2/github-logo.png" alt="" />
+
+                    </div>
                     <div onClick={() => handleLogin(googleLogin)} className="w-12 h-12 bg-gray-200 rounded-xl">
                         <img src="https://i.ibb.co/cLDFfkY/google-logo.png" alt="" />
 
                     </div>
-                    <div onClick={() => handleLogin(githubLogin)} className="w-12 h-12 bg-gray-200 rounded-xl">
-                        <img src="https://i.ibb.co/Mp0sLB2/github-logo.png" alt="" />
+                    <div onClick={() => handleLogin(facebookLogin)} className="w-12 h-12 bg-gray-200 rounded-xl">
+                        <img src="https://i.ibb.co/3Fs7bXj/facebook-logo.png" alt="" />
 
                     </div>
                 </div>

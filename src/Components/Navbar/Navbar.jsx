@@ -15,11 +15,14 @@ const Navbar = () => {
             </li>
             {
                 user && <li>
-                    <NavLink to='/profile'> Profile</NavLink>
+                    <NavLink to='/updateprofile'>Update Profile</NavLink>
                 </li>
             }
 
 
+            <li>
+                <NavLink to='/register'>Register</NavLink>
+            </li>
             <li>
                 <NavLink to='/clients'>Clients</NavLink>
             </li>
@@ -56,12 +59,12 @@ const Navbar = () => {
             </div>
             <div className="navbar-end space-x-5 ">
                 {
-                    user?.email ? <div className="flex gap-3 lg:gap-5 items-center">
+                    user ? <div className="flex gap-3 lg:gap-5 items-center">
 
-                        <div className="grid  w-10 h-10 lg:w-12 lg:h-12 bg-base-300 place-items-center rounded-full tooltip tooltip-left" data-tip={user?.displayName
+                        <div className="grid  w-10 h-10 lg:w-12 lg:h-12 bg-base-300 place-items-center rounded-full tooltip tooltip-left" data-tip={user.displayName
                         }>
 
-                            <img className="rounded-full" src={user?.photoURL} alt="" />
+                            <img className="rounded-full" src={user.photoURL} alt="" />
                         </div>
                         <div>
                             <button onClick={signOutInUser} className="btn btn-secondary font-bold">Log Out</button>

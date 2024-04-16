@@ -9,10 +9,10 @@ import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 
-const Profile = () => {
+const UpdateProfile = () => {
 
-    const { updateProfileUser } = useContext(AuthContext)
-
+    const { updateUserProfile, user } = useContext(AuthContext)
+    const [changeValue, setChangeValue] = useState()
 
     const {
         register,
@@ -22,12 +22,12 @@ const Profile = () => {
 
 
     const onSubmit = (data) => {
-        const { name, photo } = data
+        const { name, image } = data
 
 
         //create user and update user
 
-        updateProfileUser(name, photo)
+        updateUserProfile(name, image)
             .then((result) => {
 
                 toast("Profile Updated")
@@ -39,6 +39,9 @@ const Profile = () => {
             })
     }
 
+    const handleChange = e => {
+        setChangeValue(e.targer.value)
+    }
 
     return (
         <div className="w-3/4 lg:w-1/3 mx-auto  bg-base-200">
@@ -56,7 +59,7 @@ const Profile = () => {
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="text" className="input input-bordered"
+                            <input onChange={handleChange} defaultValue={user.displayName} value={changeValue} type="text" className="input input-bordered"
                                 {...register("name", { required: true })}
                             />
 
@@ -68,7 +71,7 @@ const Profile = () => {
                             <label className="label">
                                 <span className="label-text">PhotoURL</span>
                             </label>
-                            <input type="text" className="input input-bordered"
+                            <input value={user.photoURL} type="text" className="input input-bordered"
                                 {...register("photo", { required: true })}
                             />
                             {errors.photo && <span className='text-red-500'>This field is required</span>}
@@ -91,4 +94,4 @@ const Profile = () => {
     );
 };
 
-export default Profile;
+export default UpdateProfile;
