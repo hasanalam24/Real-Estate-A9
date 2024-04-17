@@ -13,7 +13,7 @@ const Register = () => {
     const [passwordShow, setPasswordShow] = useState(false)
     const [errorMessage, setErrorMessager] = useState()
 
-    const { createUser, updateUserProfile } = useContext(AuthContext)
+    const { createUser, updateUserProfile, signOutInUser } = useContext(AuthContext)
     const {
         register,
         handleSubmit,
@@ -24,7 +24,7 @@ const Register = () => {
 
     const onSubmitBtn = data => {
         const { email, password, name, image } = data
-        console.log(data)
+
         console.log(data)
         if (password.length < 6) {
             setErrorMessager('Password should be at least 6 characters or longer')
@@ -45,7 +45,8 @@ const Register = () => {
                 toast("Your registratiion Successfully")
                 updateUserProfile(name, image)
                     .then(() => {
-                        navigate("/")
+                        signOutInUser()
+                        navigate("/login")
 
                     })
                     .catch(error => {
