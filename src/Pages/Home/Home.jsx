@@ -12,7 +12,7 @@ const Home = () => {
         <div>
             <Helmet>
                 <title>
-                    Home
+                    DH | Home
                 </title>
             </Helmet>
             <Slider></Slider>
